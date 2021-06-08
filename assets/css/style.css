@@ -1,6 +1,35 @@
-header {
-    padding: 40px;
-    text-align: center;
-    color: black;
+nav {
+  background-color: teal;
+  height: 120px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+aside {
+  flex: 1;
+  max-width: 25%;
+  background-color: rgb(217, 246, 246);
+  padding: 80px;
+  text-align: left;
+}
+
+footer {
+  background-color: teal;
+  height: 50px
+}
+
+@media screen and (max-width: 768px) {
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  main,
+  nav {
+    flex-direction: column;
+  }
+  /* Make the sidebar stack below the body */
+  aside {
+    order: 2;
   }
 

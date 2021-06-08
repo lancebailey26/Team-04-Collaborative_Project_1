@@ -11,9 +11,46 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Logo</a>
+          <h1 class="brand-logo center">Welcome to your Activity Selector</h1>
         </div>
       </nav>
+      <main>
+        <aside>
+          <h2>Start HERE!</h2>
+          <p>
+            Complete the following fields and allow this wondrous tool to cure the most common illness in the world...BOREDOM!
+          </p>
+          <form>
+            <h5>Make your selection:</h5>
+            <p>
+              <label for="username">Name:</label>
+              <input class="text-input" id="username" type="text" placeholder="First Last" />
+            </p>
+            <p>
+              <label for="email">E-mail:</label>
+              <input class="text-input" id="email" type="text" placeholder="me@example.com" />
+            </p>
+            <p class="flex-row">
+              <label for="expertise">Number of participants:</label>
+              <select id="expertise">
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+              </select>
+            </p>
+            <p>
+              <label for="comment">Comment:</label>
+              <textarea class="text-input" id="comment" placeholder="Add comment here!"></textarea>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              </button>
+            </p>
+          </form>
+        </aside>
+  
+        <div class="results">
+
+        </div>
+      </main>
     <footer></footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
