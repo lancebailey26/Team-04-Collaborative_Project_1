@@ -16,19 +16,51 @@
 </head>
 
 <body>
+    <header>
     <h1>What Should I Do Today?</h1>
     <h2>the wondorous tool designed to cure the most common illness in the world, boredom!</h2>
+</header>
+<section>
+    <div class="input-field col s12">
+        <select class="browser-default"id="participant">
+          <option value="" disabled selected>Choose # of participants</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div class="input-field col s12">
+        <select class="browser-default"id="maxprice">
+          <option value="" disabled selected>Choose $ range</option>
+          <option value=".5">a little</option>
+          <option value="1">a  lot</option>
+        </select>
+      </div>
+<button id="go">show me</button>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section class="output">
+    <div>
     <h3></h1>
     <h4></h2>
     <p></p>
     </div>
+</section>
  <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script>document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+          });</script> -->
     <script src="./assets/script.js" async defer></script>
 
 </body>
