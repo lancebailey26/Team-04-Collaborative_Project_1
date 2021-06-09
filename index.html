@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Finder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -16,7 +15,7 @@
     </nav>
     <main class="results">
 
-        <h2><span id="timer"></span></h2>
+        <h2 id="timer"></h2>
   
         <div class="results">
 
@@ -34,14 +33,14 @@
             </p>
             <p>
               <label for="selection">Number of participants:</label>
-              <select id="participants">
+              <select id="participants" attribute="select">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
               </select>
             </p>
             <p>
-              <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <button id="submit" class="btn waves-effect waves-light" type="submit" name="action" attribute="Submit button">Submit
               </button>
             </p>
           </form>

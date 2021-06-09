@@ -12,6 +12,12 @@ body {
   justify-content: flex-start;
 }
 
+#h1{
+  display:flex;
+  justify-content: center;
+  color: white;
+  margin: 50vw;
+}
 main {
   display: flex;
   flex-wrap: wrap;
