@@ -18,6 +18,10 @@ main {
   flex-grow: 1;
 }
 
+.results {
+  text-align: center;
+}
+
 aside {
   flex: 1;
   max-width: 25%;
@@ -50,6 +54,7 @@ footer {
   }
   /* Make the sidebar stack below the body */
   aside {
-    order: 2;
+    flex-direction: column;
+
   }
 }
