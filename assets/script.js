@@ -10,7 +10,7 @@ document.getElementById("submit").addEventListener("click", countdown);
 
 function countdown(event) {
     event.preventDefault();
-    $('h2').removeClass('hide');
+    $('#timer').removeClass('hide');
     $('#resultsbox').addClass('hide');
     var count = 4;
     // console.log("test");
