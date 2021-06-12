@@ -28,9 +28,11 @@ main {
 
 /* too many pieces have the same class name */
 .results {
-  text-align: center;
+  text-align: left;
+  line-height: 1.5rem;
 }
-  
+
+
 aside {
   flex: 1;
   margin: 50px;
@@ -41,13 +43,16 @@ aside {
 }
 
 /* Start Here header */
+.startHere{
+  font-weight: bold;
+}
 
 #participants{
   display: block;
 }
 
 /* if change to .container, the box will display ~center of the page */
-.results {
+.container {
   flex: 4;
   font-size: 24px;
   background-color: #fff;
