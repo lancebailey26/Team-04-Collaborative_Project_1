@@ -3,15 +3,17 @@
 // 0.0 - 1
 
 
-
 document.getElementById("submit").addEventListener("click", countdown);
-
 
 
 function countdown(event) {
     event.preventDefault();
     $('#timer').removeClass('hide');
-    $('#resultsbox').addClass('hide');
+    
+    // ADD HIDE CLASS TO HTML NOT JUST JAVASCRIPT
+    // want everything to do with the results box to be hidden before the submit is clicked
+    // $('#resultsbox').addClass('hide');
+
     var count = 4;
     // console.log("test");
     // console.log(count);
@@ -71,6 +73,24 @@ function boredAPI() {
             // conditional based on the areas weather and then set the inner html
             // to be the image from assets folder instead of word itself
             // future: could have a full page gif based on location weather (cloudy, rainy, thunderstorm, sun)
+            const cloudyImg = "assets/cloud.png";
+            console.log(weatherdesc);
+            switch (weatherdesc) {
+                case 'Clouds':
+                    document.getElementById('image').src = cloudyImg;
+                    break;
+                case 'Rainy': //rainy
+                    // document.getElementById('image').src = imageVar2;
+                    break;
+                case 'Sunny':
+                    // document.getElementById('image').src = sunnyImage;
+                    break;
+            
+                default: // if no option then there can be no image or if there is no trait we can have some other holders
+
+                    break;
+            }
+            //document.getElementById('image').src = imageVar;
 
             var participants = $("#participants option:selected").val();
             // var badWeather = $('#weather4').text(); 
@@ -87,8 +107,8 @@ function boredAPI() {
                         var participants = data.participants
                         var price = data.price;
                         $('#activity1').text(act);
-                        $('#activity2').text('as far as price, we rate this as a ' + price + ' on a scale of 0 - 1')
-                        $('#activity3').text('this is an idea for an activity with ' + participants + ' participant(s). run the code again if you dont like it.');
+                        $('#activity2').text('As far as price, we rate this as a ' + price + ' on a scale of 0 - 1')
+                        $('#activity3').text('%his is an idea for an activity with ' + participants + ' participant(s). Run the code again if you dont like it.');
 
                     })
             } else {

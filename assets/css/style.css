@@ -9,7 +9,11 @@ nav {
 .hide{
   display:none;
 }
-  
+
+#header1{
+  font-size: 48px;
+}
+
 body {
   font-family: Arial;
   margin: 0;
@@ -26,17 +30,17 @@ main {
   flex-grow: 1;
 }
 
-/* too many pieces have the same class name */
-.results {
+#resultsbox{
   text-align: left;
-  line-height: 1.5rem;
+  padding: 50px;
+  margin: 10px;
+  line-height: 2;
+  background-color:rgb(217, 246, 246);
 }
-
 
 aside {
   flex: 1;
-  margin: 50px;
-  /* max-width: 80%; */
+  margin: 20px;
   background-color: rgb(217, 246, 246);
   padding: 25px 80px 25px 80px;
   text-align: left;
@@ -147,4 +151,3 @@ footer {
 
   }
 }
-
