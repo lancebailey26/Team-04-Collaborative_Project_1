@@ -68,6 +68,10 @@ function boredAPI() {
             $('#weather3').text(temperature);
             $('#weather4').text(weatherdesc);
 
+            // conditional based on the areas weather and then set the inner html
+            // to be the image from assets folder instead of word itself
+            // future: could have a full page gif based on location weather (cloudy, rainy, thunderstorm, sun)
+
             var participants = $("#participants option:selected").val();
             // var badWeather = $('#weather4').text(); 
             // var maxprice = $("#maxprice option:selected").val();

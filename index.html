@@ -4,51 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Finder</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 </head>
+
 <body>
     <nav>
         <div class="nav-wrapper">
           <h1 class="brand-logo center">Welcome to your Activity Selector</h1>
         </div>
     </nav>
-    <main class="results">
+    <!-- can change class to container -->
+    <main class="container">
 
+      <h2 id="timer"></h2>
+
+      <!-- Displays the results once the submit button is clicked -->
+      <div id="resultsbox">
+        <!-- weather1 = today's date -->
+        <h3 id="weather1"></h3>
+
+        <!-- weather2 = location, weather3 = current locationTemp, weather4 = location climate -->
+        <section class="locationWeather">
+          <div id="weather2"></div>
+          <div id="weather3"></div>
+          <div id="weather4"></div>
+        </section>
+
+        <section class="activities">
+        <!-- activity1 = ran generated activity, activity2 = describes the cost,
+           activity3 = prompts user to run app again if they don't like the activity -->
+  
+          <div id="activity1"></div>
+          <div id="activity2"></div>
+          <div id="activity3"></div>
+        </section>
+      </div>
       
-        <h2 id="timer"></h2>
-  
-        <div class="results" id="resultsbox">
-          <p id="weather1"></p>
-          <p id="weather2"></p>
-          <p id="weather3"></p>
-          <p id="weather4"></p>
-          <p id="activity1"></p>
-          <p id="activity2"></p>
-          <p id="activity3"></p>
-        </div>
-        <aside>
-          <h3>Start HERE!</h3>
 
-        <h2 id="timer"></h2>
-  
-        <div class="results">
-          <p id="weather"></p>
-          <p id="activity"></p>
-
-        </div>
+        <!-- Creates box for user input -->
         <aside>
-          <h2>Start HERE!</h2>
+          <h3 class="startHeader">Start HERE!</h3>
 
           <p>
             Complete the following fields and allow this wondrous tool to cure the most common illness in the world...BOREDOM!
           </p>
           <form>
             <h5>Make your selection:</h5>
+            <!-- User inputs location here -->
             <p>
               <label for="location">Enter your city/state (city,state):</label>
               <input class="text-input" id="state" type="text" placeholder="city/state" />
             </p>
+            <!-- User inputs up to three people for an activity -->
             <p>
               <label for="selection">Number of participants:</label>
               <select id="participants" attribute="select">
@@ -57,23 +67,25 @@
                 <option>3</option>
               </select>
             </p>
+            <!-- submit button -->
             <p>
               <button id="submit" class="btn waves-effect waves-light" type="submit" name="action" attribute="Submit button">Submit
               </button>
             </p>
           </form>
         </aside>
+        
     </main>
 
     <footer></footer>
 
 
-   
+   <!-- all js srcs -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="./assets/script.js"></script>  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
