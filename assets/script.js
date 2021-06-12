@@ -43,11 +43,16 @@ function boredAPI() {
     fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey
     )
-
         .then(function (response) {
             let data = response.json();
+            if (response !== 200){
+                $('#weather1').text("Invalid input, please try again")
+            }else{
             return data;
-        })
+              }
+            })
+            
+        
         .then(function (data) {
             console.log(data)
             // var temperatureContainerEl = document.querySelector('#temperature-container');
