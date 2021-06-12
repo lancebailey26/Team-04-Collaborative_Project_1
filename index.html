@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 </head>
+
 <body>
     <nav>
         <div class="nav-wrapper">
@@ -16,19 +17,33 @@
         </div>
     </nav>
     <!-- can change class to container -->
-    <main class="results">
+    <main class="container">
 
-        <h2 id="timer"></h2>
-       <!-- Displays the results once the submit button is clicked -->
-        <div class="results" id="resultsbox">
-          <p id="weather1"></p>
-          <p id="weather2"></p>
-          <p id="weather3"></p>
-          <p id="weather4"></p>
-          <p id="activity1"></p>
-          <p id="activity2"></p>
-          <p id="activity3"></p>
-        </div>
+      <h2 id="timer"></h2>
+
+      <!-- Displays the results once the submit button is clicked -->
+      <div id="resultsbox">
+        <!-- weather1 = today's date -->
+        <h3 id="weather1"></h3>
+
+        <!-- weather2 = location, weather3 = current locationTemp, weather4 = location climate -->
+        <section class="locationWeather">
+          <div id="weather2"></div>
+          <div id="weather3"></div>
+          <div id="weather4"></div>
+        </section>
+
+        <section class="activities">
+        <!-- activity1 = ran generated activity, activity2 = describes the cost,
+           activity3 = prompts user to run app again if they don't like the activity -->
+  
+          <div id="activity1"></div>
+          <div id="activity2"></div>
+          <div id="activity3"></div>
+        </section>
+      </div>
+      
+
         <!-- Creates box for user input -->
         <aside>
           <h3 class="startHeader">Start HERE!</h3>
