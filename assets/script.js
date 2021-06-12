@@ -49,7 +49,7 @@ function boredAPI() {
     var apiKey = "6ca38b593072c5ff245976d803e5f35b";
 
     fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey
+        "https://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&units=imperial" + "&appid=" + apiKey
     )
         .then(function (response) {
             let data = response.json();
