@@ -6,7 +6,15 @@
 
 document.getElementById("submit").addEventListener("click", countdown);
 
-
+function clear(){
+    $('#weather1').text('');
+    $('#weather2').text('');
+    $('#weather3').text('');
+    $('#weather4').text('');
+    $('#activity1').text('');
+    $('#activity2').text('');
+    $('#activity3').text('');
+}
 
 function countdown(event) {
     event.preventDefault();
@@ -36,7 +44,7 @@ function countdown(event) {
 
 
 function boredAPI() {
-    
+    clear();
     var city = document.querySelector('#state').value;
     var apiKey = "6ca38b593072c5ff245976d803e5f35b";
 
@@ -45,7 +53,7 @@ function boredAPI() {
     )
         .then(function (response) {
             let data = response.json();
-            if (response !== 200){
+            if (response.status != 200){
                 $('#weather1').text("Invalid input, please try again")
             }else{
             return data;
