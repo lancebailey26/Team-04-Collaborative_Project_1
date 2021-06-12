@@ -15,17 +15,21 @@
           <h1 class="brand-logo center">Welcome to your Activity Selector</h1>
         </div>
     </nav>
-    <main class="container">
+    <!-- can change class to container -->
+    <main class="results">
 
         <h2 id="timer"></h2>
-  
-        <!-- This isn't doing anything
-           <div class="results">
-          <p id="weather"></p>
-          <p id="activity"></p>
-
-        </div> -->
-      <!-- This starts blue box for user input -->
+       <!-- Displays the results once the submit button is clicked -->
+        <div class="results" id="resultsbox">
+          <p id="weather1"></p>
+          <p id="weather2"></p>
+          <p id="weather3"></p>
+          <p id="weather4"></p>
+          <p id="activity1"></p>
+          <p id="activity2"></p>
+          <p id="activity3"></p>
+        </div>
+        <!-- Creates box for user input -->
         <aside>
           <h3 class="startHeader">Start HERE!</h3>
 
@@ -34,10 +38,12 @@
           </p>
           <form>
             <h5>Make your selection:</h5>
+            <!-- User inputs location here -->
             <p>
               <label for="location">Enter your city/state (city,state):</label>
               <input class="text-input" id="state" type="text" placeholder="city/state" />
             </p>
+            <!-- User inputs up to three people for an activity -->
             <p>
               <label for="selection">Number of participants:</label>
               <select id="participants" attribute="select">
@@ -46,6 +52,7 @@
                 <option>3</option>
               </select>
             </p>
+            <!-- submit button -->
             <p>
               <button id="submit" class="btn waves-effect waves-light" type="submit" name="action" attribute="Submit button">Submit
               </button>
@@ -58,12 +65,12 @@
     <footer></footer>
 
 
-   
+   <!-- all js srcs -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="./assets/script.js"></script>  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 

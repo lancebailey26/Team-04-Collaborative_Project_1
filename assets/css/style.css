@@ -45,8 +45,9 @@ aside {
 #participants{
   display: block;
 }
-  
-.container {
+
+/* if change to .container, the box will display ~center of the page */
+.results {
   flex: 4;
   font-size: 24px;
   background-color: #fff;
