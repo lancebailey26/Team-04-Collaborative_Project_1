@@ -3,8 +3,9 @@
 // 0.0 - 1
 
  
-//Event listener for submit click
+//Event listener for any user input/click
 document.getElementById("submit").addEventListener("click", countdown);
+
 // Clears  existing weather & activity content
 function clear(){
     $('#weather1').text('');
@@ -15,7 +16,8 @@ function clear(){
     $('#activity2').text('');
     $('#activity3').text('');
 }
-//Countdown timer to display  successive user interactive pages based on weather and participant input
+
+//Countdown timer with 1 sec lag to display  user interface based on cityname input and # of participants input
 function countdown(event) {
     event.preventDefault();
     $('#timer').removeClass('hide');
@@ -42,8 +44,9 @@ function countdown(event) {
 
 }
 
-// The function below calls the weather API ;Depending upon the city's weather conditions lists suitable random activities from the BoredAPI
-
+// The function below calls the weather API and BoredAPI.Displays city's weather conditions .Based on weather conditions ,random activity is displayed with price
+//tag and # of partcipants.The user has choice to run the code multiple times to pick a different activity if he does not like the one generated.
+//The random activity types are listed under if else branch for 2 different categories.
 function boredAPI() {
     clear();
     var city = document.querySelector('#state').value;
