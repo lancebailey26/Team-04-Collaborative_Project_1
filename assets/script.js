@@ -1,13 +1,22 @@
+
 //Event listener for submit click
+
 document.getElementById("submit").addEventListener("click", countdown);
+//localstorage define
 localStorage.setItem('searchCounter', 0);
 
 
+JS2
 //Countdown timer to display  successive user interactive pages based on weather and participant input
+
 function countdown(event) {
     event.preventDefault();
     $('#timer').removeClass('hide');
-    $('#resultsbox').addClass('hide');
+    
+    // ADD HIDE CLASS TO HTML NOT JUST JAVASCRIPT
+    // want everything to do with the results box to be hidden before the submit is clicked
+    // $('#resultsbox').addClass('hide');
+
     var count = 4;
     var interval = setInterval(function () {
         var timerEl = document.getElementById("timer");
@@ -54,6 +63,7 @@ function boredAPI() {
             var citySearch = data.name;
             var temperature = data.main.temp;
             var weatherdesc = data.weather[0].main;
+      //if loclastorage doesnt exist, make it, each time this function is ran, add 1 to the total.
             if(localStorage.getItem("searchCounter")===null){
                 localStorage.setItem("searchCounter", 0)
             }
@@ -71,6 +81,24 @@ function boredAPI() {
             // conditional based on the areas weather and then set the inner html
             // to be the image from assets folder instead of word itself
             // future: could have a full page gif based on location weather (cloudy, rainy, thunderstorm, sun)
+            const cloudyImg = "assets/cloud.png";
+            console.log(weatherdesc);
+            switch (weatherdesc) {
+                case 'Clouds':
+                    document.getElementById('image').src = cloudyImg;
+                    break;
+                case 'Rainy': //rainy
+                    // document.getElementById('image').src = imageVar2;
+                    break;
+                case 'Sunny':
+                    // document.getElementById('image').src = sunnyImage;
+                    break;
+            
+                default: // if no option then there can be no image or if there is no trait we can have some other holders
+
+                    break;
+            }
+            //document.getElementById('image').src = imageVar;
 
             var participants = $("#participants option:selected").val();
             if (weatherdesc === "Rain" || weatherdesc === "Thunderstorm" || weatherdesc === "Drizzle" || weatherdesc === "Snow" || temperature < 50) {
@@ -83,6 +111,7 @@ function boredAPI() {
                         var act = data.activity;
                         var participants = data.participants
                         var price = data.price;
+
 
                         $('#activity1').text("Activity: " + act);
                         $('#activity2').text("Price Scale: " + price + " (scale of 0 - 1)")
