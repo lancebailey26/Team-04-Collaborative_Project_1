@@ -89,7 +89,7 @@ function boredAPI() {
             // var badWeather = $('#weather4').text(); 
             // var maxprice = $("#maxprice option:selected").val();
             // console.log(participants);
-            if (weatherdesc === "Rain" || temperature < 50) {
+            if (weatherdesc === "Rain" || weatherdesc === "Thunderstorm" || weatherdesc === "Drizzle"|| weatherdesc === "Snow" || temperature < 50) { 
                 fetch('http://www.boredapi.com/api/activity?&participants=' + participants + '&type=education&type=relaxation&type=music&type=cooking')
                     .then(function (response) {
                         return response.json();
