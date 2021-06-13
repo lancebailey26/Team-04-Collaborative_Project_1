@@ -6,7 +6,7 @@ document.getElementById("submit").addEventListener("click", countdown);
 localStorage.setItem('searchCounter', 0);
 
 
-JS2
+//JS2
 //Countdown timer to display  successive user interactive pages based on weather and participant input
 
 function countdown(event) {
