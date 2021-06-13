@@ -5,6 +5,7 @@
 nav {
   background-color: teal;
   height: 120px;
+  border-bottom: 8px solid rgb(184, 153, 75);
 }
 .hide{
   display:none;
@@ -21,6 +22,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
+  background-color: rgb(184, 153, 75, .2);
   }
   
   
@@ -35,7 +37,6 @@ main {
   padding: 50px;
   margin: 10px;
   line-height: 2;
-  background-color:rgb(217, 246, 246);
 }
 
 aside {
@@ -71,6 +72,7 @@ footer {
   background-color: teal;
   height: 50px;
   bottom: 0;
+  border-top: 3px solid rgb(184, 153, 75);
 }
   
 @media screen and (max-width: 768px) {
