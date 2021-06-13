@@ -80,7 +80,7 @@ function boredAPI() {
 
             var participants = $("#participants option:selected").val();
             if (weatherdesc === "Rain" || weatherdesc === "Thunderstorm" || weatherdesc === "Drizzle" || weatherdesc === "Snow" || temperature < 50) {
-                fetch('http://www.boredapi.com/api/activity?&participants=' + participants + '&type=education&type=relaxation&type=music&type=cooking')
+                fetch('https://www.boredapi.com/api/activity?&participants=' + participants + '&type=education&type=relaxation&type=music&type=cooking')
                     .then(function (response) {
                         return response.json();
                     })
@@ -99,7 +99,7 @@ function boredAPI() {
 
                     })
             } else {
-                fetch('http://www.boredapi.com/api/activity?&participants=' + participants + '&type=recreational&type=diy&type=social&type=busywork')
+                fetch('https://www.boredapi.com/api/activity?&participants=' + participants + '&type=recreational&type=diy&type=social&type=busywork')
                     .then(function (response) {
                         return response.json();
                     })
