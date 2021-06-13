@@ -78,28 +78,6 @@ function boredAPI() {
             $('#weather3').text("Temperature: " + Math.floor(temperature) + " °F");
             $('#weather4').text(weatherdesc);
 
-            // conditional based on the areas weather and then set the inner html
-            // to be the image from assets folder instead of word itself
-            // future: could have a full page gif based on location weather (cloudy, rainy, thunderstorm, sun)
-            const cloudyImg = "assets/cloud.png";
-            console.log(weatherdesc);
-            switch (weatherdesc) {
-                case 'Clouds':
-                    document.getElementById('image').src = cloudyImg;
-                    break;
-                case 'Rainy': //rainy
-                    // document.getElementById('image').src = imageVar2;
-                    break;
-                case 'Sunny':
-                    // document.getElementById('image').src = sunnyImage;
-                    break;
-            
-                default: // if no option then there can be no image or if there is no trait we can have some other holders
-
-                    break;
-            }
-            //document.getElementById('image').src = imageVar;
-
             var participants = $("#participants option:selected").val();
             if (weatherdesc === "Rain" || weatherdesc === "Thunderstorm" || weatherdesc === "Drizzle" || weatherdesc === "Snow" || temperature < 50) {
                 fetch('http://www.boredapi.com/api/activity?&participants=' + participants + '&type=education&type=relaxation&type=music&type=cooking')
