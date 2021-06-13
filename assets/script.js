@@ -15,7 +15,7 @@ function countdown(event) {
     
     // ADD HIDE CLASS TO HTML NOT JUST JAVASCRIPT
     // want everything to do with the results box to be hidden before the submit is clicked
-    // $('#resultsbox').addClass('hide');
+    $('#resultsbox').addClass('hide');
 
     var count = 4;
     var interval = setInterval(function () {
