@@ -11,12 +11,12 @@ localStorage.setItem('searchCounter', 0);
 
 function countdown(event) {
     event.preventDefault();
+    $('#resultsbox').addClass('hide');
     $('#timer').removeClass('hide');
-    
+ 
     // ADD HIDE CLASS TO HTML NOT JUST JAVASCRIPT
     // want everything to do with the results box to be hidden before the submit is clicked
-    $('#resultsbox').addClass('hide');
-
+  
     var count = 4;
     var interval = setInterval(function () {
         var timerEl = document.getElementById("timer");
