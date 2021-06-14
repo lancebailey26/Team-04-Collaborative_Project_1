@@ -115,7 +115,6 @@ main {
 
 aside {
   flex: 1;
-  max-width: 25%;
   background-color: rgb(217, 246, 246);
   padding: 80px;
   text-align: left;
