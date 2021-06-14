@@ -1,7 +1,7 @@
-# Team-04-Collabrative_Project_1
+# Team-04-Collaborative_Project_1
 
 ## Overview: 
-The purpose of <insert site name> is to provide the user with an activity to do based on the weather. If the user is bored or looking for something to do, they should be able to enter their location into the site. Upon submitting the location, the site will check the weather to determine the weather then provide an activity to do based on the weather details. This site will utilize both <insert weather API> and www.boredapi.com APIs to achieve this response. 
+The purpose of <insert site name> is to provide the user with an activity to do based on the weather. If the user is bored or looking for something to do, they should be able to enter their location into the site. Upon submitting the location, the site will check the weather to determine the weather then provide an activity to do based on the weather details. This site will utilize both https://openweathermap.org/api and www.boredapi.com APIs to achieve this response. 
 
 ## User Stories
 As a user, I want to be provided with an activity or activities that I can do based on the weather, so that I can have something to do when I am bored.
@@ -18,7 +18,7 @@ THEN I can enter my city and state
 
 GIVEN I am on <the site>
 WHEN I click the "number of people" drop down box
-THEN then the options <1-10> are displayed
+THEN then the options <1-3> are displayed
 
 GIVEN the "number of people" drop down box is expanded
 WHEN I click on an option
@@ -60,5 +60,5 @@ Once the page loads, type in your city and the number of individuals (up to thre
 
 ## APIs
 The following APIs are used in this site:
-www.boredapi.com
+www.boredapi.com https://openweathermap.org/api
 
