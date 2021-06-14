@@ -12,7 +12,7 @@ nav {
 }
 
 #header1{
-  font-size: 48px;
+  font-size: 2.5rem;
 }
 
 body {
@@ -138,6 +138,9 @@ footer {
   background-color: teal;
   height: 50px;
   bottom: 0;
+}
+#header1{
+  font-size: 28px;
 }
 }
 
