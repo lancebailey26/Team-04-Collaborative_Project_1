@@ -39,15 +39,15 @@ Once the page loads, type in your city and the number of individuals (up to thre
 ![activity_selector_gif](assets/images/demo.gif)
   
 ## Future Development
-*Add something like a “loading screen” like in video games
-  *Case I:  API loads slower than the timer counting down, then we could display quotes, random facts, etc. for a second
-    *Would need to check each second to see if the API had finished counting down, if it had then we would display 
-  *Case II: the user has fast internet, so the timer is unnecessary
-    *Can immediately display the results
-*If the user doesn’t like their randomly generated activity, add a “return to landing page” button, so they don’t have to refresh 
-*Identify random activity  based on participants (5 max limit allowed by BoredAPI ) , accessibility and user friendly choice of price to get optimized outcomes .
-*Enhance user experience by including audio and visual effects.
-*Allow user to specify which state they’re in (Columbus, OH vs Columbus, GA)
+1. Add something like a “loading screen” like in video games
+   - Case I:  API loads slower than the timer counting down, then we could display quotes, random facts, etc. for a second
+     - Would need to check each second to see if the API had finished counting down, if it had then we would display 
+   - Case II: the user has fast internet, so the timer is unnecessary
+     - Can immediately display the results
+2. If the user doesn’t like their randomly generated activity, add a “return to landing page” button, so they don’t have to refresh 
+3. Identify random activity  based on participants (5 max limit allowed by BoredAPI ) , accessibility and user friendly choice of price to get optimized outcomes .
+4. Enhance user experience by including audio and visual effects.
+5. Allow user to specify which state they’re in (Columbus, OH vs Columbus, GA)
 
 
 ## APIs
