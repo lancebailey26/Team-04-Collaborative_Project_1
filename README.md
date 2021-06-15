@@ -12,11 +12,11 @@ GIVEN I looking for something to do
 WHEN I access <the site>
 THEN the site name, description of the site, location text box, and "number of people" drop down are displayed
 
-GIVEN I am on <the site>
+GIVEN I am on the Activity Selector
 WHEN I click in the location text box
 THEN I can enter my city and state
 
-GIVEN I am on <the site>
+GIVEN I am on the Activity Selector
 WHEN I click the "number of people" drop down box
 THEN then the options <1-3> are displayed
 
@@ -28,27 +28,7 @@ GIVEN I have entered my location and number of people
 WHEN I click submit
 THEN the weather (in my location) and an activity are displayed
 
-''''''''''''''''''''''''''''''''''''''''''''''''''''''
-GIVEN I have entered my location, and not the number of people
-WHEN I click submit
-THEN I am provided a message that says "Please include the number of people"
-
-GIVEN I have entered the number of people, and not my location
-WHEN I click submit
-THEN I am provided a message that says "Please select your location"
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-
-GIVEN I have entered my location, and not the number of people
-WHEN I click submit
-THEN a pop up message displays with the option to continue without considering the number of people
-
-GIVEN a pop up message displays with the option to continue without considering the number of people
-WHEN I click continue
-THEN the weather in my location and an activity are displayed
-WHEN I click cancel
-THEN I start over
-
-GIVEN I have entered the number of people, and not my location
+GIVEN I enter a non valid location
 WHEN I click submit
 THEN I am provided a message that says "Please select your location"
 
@@ -57,6 +37,18 @@ Once the page loads, type in your city and the number of individuals (up to thre
 
 
 ![activity_selector_gif](assets/images/demo.gif)
+  
+## Future Development
+-Add something like a “loading screen” like in video games
+--Case I:  API loads slower than the timer counting down, then we could display quotes, random facts, etc. for a second
+---Would need to check each second to see if the API had finished counting down, if it had then we would display 
+--Case II: the user has fast internet, so the timer is unnecessary
+---Can immediately display the results
+-If the user doesn’t like their randomly generated activity, add a “return to landing page” button, so they don’t have to refresh 
+-Identify random activity  based on participants (5 max limit allowed by BoredAPI ) , accessibility and user friendly choice of price to get optimized outcomes .
+-Enhance user experience by including audio and visual effects.
+-Allow user to specify which state they’re in (Columbus, OH vs Columbus, GA)
+
 
 ## APIs
 The following APIs are used in this site:
