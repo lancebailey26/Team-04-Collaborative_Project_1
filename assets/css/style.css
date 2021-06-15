@@ -14,6 +14,9 @@ nav {
 #header1{
   font-size: 48px;
 }
+#header4{
+  display:none;
+}
 
 body {
   font-family: Arial;
@@ -78,20 +81,34 @@ footer {
   
 @media screen and (max-width: 768px) {
   /* Use flex-direction to stack the navbar, sidebar, and body */
-  main,
-  nav {
+
+main,
+nav {
     flex-direction: column;
-  }
+}
   /* Make the sidebar stack below the body */
-  aside {
-    flex-direction: column;
-  
-  }
-
-
-  /* background-color: teal;
+nav {
+  background-color: teal;
   height: 120px;
-} */
+  max-width:100%;
+  border-bottom: 8px solid rgb(184, 153, 75);
+}
+aside {
+  flex-direction: column;
+  
+}
+
+#header1{
+  display:none;
+  
+}
+
+#header4{
+  display:contents;
+  display:flex;
+  justify-content:center;
+  font-size: 26px;
+}
 
 body {
   font-family: Arial;
@@ -115,9 +132,8 @@ main {
 
 aside {
   flex: 1;
-  max-width: 25%;
+  max-width: 100%;
   background-color: rgb(217, 246, 246);
-  padding: 80px;
   text-align: left;
 }
 
@@ -125,32 +141,15 @@ aside {
   display: block
 }
 
-.results {
-  flex: 4;
-  background-color: #fff;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start; 
-}
 
 footer {
   background-color: teal;
   height: 50px;
+  max-width:100%;
   bottom: 0;
+  border-top: 3px solid rgb(184, 153, 75);
 }
 }
 
-@media screen and (max-width: 768px) {
-  /* Use flex-direction to stack the navbar, sidebar, and body */
-  main,
-  nav {
-    flex-direction: column;
-  }
-  /* Make the sidebar stack below the body */
-  aside {
-    flex-direction: column;
 
-  }
-}
+
