@@ -12,7 +12,7 @@ nav {
 }
 
 #header1{
-  font-size: 48px;
+  font-size: 2.5rem;
 }
 #header4{
   display:none;
@@ -132,7 +132,7 @@ main {
 
 aside {
   flex: 1;
-  max-width: 100%;
+
   background-color: rgb(217, 246, 246);
   text-align: left;
 }
@@ -147,7 +147,7 @@ footer {
   height: 50px;
   max-width:100%;
   bottom: 0;
-  border-top: 3px solid rgb(184, 153, 75);
+
 }
 }
 
