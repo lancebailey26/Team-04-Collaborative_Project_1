@@ -73,6 +73,7 @@ function boredAPI() {
 
 
 
+
             $('#weather1').text(displayDate);
             $('#weather2').text(citySearch);
             $('#weather3').text("Temperature: " + Math.floor(temperature) + " °F");
@@ -89,10 +90,21 @@ function boredAPI() {
                         var act = data.activity;
                         var participants = data.participants
                         var price = data.price;
-
+                        if (price === 0){
+                            var priceDisplay = "Free"
+                        }
+                        if (price > 0 && price <= 0.33){
+                            var priceDisplay = "$"
+                        }
+                        if (price > 0.33 && price <= 0.66){
+                            var priceDisplay = "$$"
+                        }
+                        if (price > 0.66 && price <= 1){
+                            var priceDisplay = "$$$"
+                        }
 
                         $('#activity1').text("Activity: " + act);
-                        $('#activity2').text("Price Scale: " + price + " (scale of 0 - 1)")
+                        $('#activity2').text("Price: " +priceDisplay)
                         $('#activity3').text("Participants: " + participants);
                         $('#activity4').text("Complete the form again for more ideas!");
                         $('#activity5').text("You've searched "+ localStorage.getItem('searchCounter') +" times. Are you bored yet?")
@@ -108,9 +120,22 @@ function boredAPI() {
                         var act = data.activity;
                         var participants = data.participants
                         var price = data.price;
+                         
+                        if (price === 0){
+                            var priceDisplay = "Free"
+                        }
+                        if (price > 0 && price <= 0.33){
+                            var priceDisplay = "$"
+                        }
+                        if (price > 0.33 && price <= 0.66){
+                            var priceDisplay = "$$"
+                        }
+                        if (price > 0.66 && price <= 1){
+                            var priceDisplay = "$$$"
+                        }
 
                         $('#activity1').text("Activity: " + act);
-                        $('#activity2').text("Price Scale: " + price + " (scale of 0 - 1)")
+                        $('#activity2').text("Price: " +priceDisplay)
                         $('#activity3').text("Participants: " + participants);
                         $('#activity4').text("Complete the form again for more ideas!");
                         $('#activity5').text("You've searched "+plusOne+" times. Are you bored yet?")
